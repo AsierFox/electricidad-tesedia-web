@@ -2,282 +2,303 @@
 <html lang="es" class="scroll-smooth">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Electricidad AGC | Soluciones Eléctricas Profesionales en Burgos</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        .glass {
-            background: rgba(255, 255, 255, 0.9);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Electricidad AGC | Soluciones Eléctricas Profesionales en Burgos</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#64b5f6',
+            dark: '#000000',
+            lightGray: '#f8fafc'
+          }
         }
+      }
+    }
+  </script>
 
-        /* Fondo con patrón geométrico sutil para el body */
-        .bg-pattern {
-            background-color: #f9fafb;
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='%23003366' fill-opacity='0.03'%3E%3Cpath fill-rule='evenodd' d='M0 0h40v40H0V0zm40 40h40v40H40V40zm0-40h40v40H40V0zM0 40h40v40H0V40z'/%3E%3C/g%3E%3C/svg%3E");
-        }
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
-        /* Degradado animado sutil para el Hero */
-        @keyframes gradient {
-            0% {
-                background-position: 0% 50%;
-            }
+  <style>
+    .glass {
+      background: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
 
-            50% {
-                background-position: 100% 50%;
-            }
+    @keyframes gradient {
+      0% {
+        background-position: 0% 50%;
+      }
 
-            100% {
-                background-position: 0% 50%;
-            }
-        }
+      50% {
+        background-position: 100% 50%;
+      }
 
-        .animate-gradient {
-            background-size: 200% 200%;
-            animation: gradient 15s ease infinite;
-        }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
 
-        /* Fondo de mapa para contacto */
-        .bg-map {
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240' viewBox='0 0 240 240'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Cpath d='M10 10h10v10H10V10zm20 0h10v10H20V10zm20 0h10v10H40V10zm20 0h10v10H60V10zm20 0h10v10H80V10zm20 0h10v10H100V10zm20 0h10v10H120V10zm20 0h10v10H140V10zm20 0h10v10H160V10zm20 0h10v10H180V10zm20 0h10v10H200V10zm20 0h10v10H220V10zM10 30h10v10H10V30zm20 0h10v10H20V30zm20 0h10v10H40V30zm20 0h10v10H60V30zm20 0h10v10H80V30zm20 0h10v10H100V30zm20 0h10v10H120V30zm20 0h10v10H140V30zm20 0h10v10H160V30zm20 0h10v10H180V30zm20 0h10v10H200V30zm20 0h10v10H220V30zM10 50h10v10H10V50zm20 0h10v10H20V50zm20 0h10v10H40V50zm20 0h10v10H60V50zm20 0h10v10H80V50zm20 0h10v10H100V50zm20 0h10v10H120V50zm20 0h10v10H140V50zm20 0h10v10H160V50zm20 0h10v10H180V50zm20 0h10v10H200V50zm20 0h10v10H220V50z...'/%3E%3C/g%3E%3C/svg%3E");
-        }
-    </style>
+    .animate-gradient {
+      background-size: 200% 200%;
+      animation: gradient 15s ease infinite;
+    }
+
+    /* Degradados de transición entre secciones */
+    .section-divider-top {
+      background: linear-gradient(to bottom, #000000, #ffffff);
+      height: 100px;
+    }
+
+    .section-divider-light {
+      background: linear-gradient(to bottom, #ffffff, #f8fafc);
+      height: 80px;
+    }
+  </style>
 </head>
 
-<body class="bg-pattern text-gray-800 font-sans">
+<body class="bg-white text-gray-800 font-sans">
 
-    <nav class="fixed w-full z-50 glass shadow-lg border-b border-gray-100">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-20 items-center">
-                <div class="flex items-center gap-2">
-                    <div class="bg-yellow-600 p-2.5 rounded-xl shadow-inner">
-                        <i class="fas fa-bolt text-2xl text-blue-950"></i>
-                    </div>
-                    <span class="text-3xl font-black tracking-tighter text-blue-950">ELECTRICIDAD <span
-                            class="text-yellow-600">AGC</span></span>
-                </div>
-                <div class="hidden md:flex items-center space-x-8 font-semibold">
-                    <a href="#inicio" class="text-blue-950 hover:text-yellow-600 transition">Inicio</a>
-                    <a href="#servicios" class="text-blue-950 hover:text-yellow-600 transition">Servicios</a>
-                    <a href="#trabajos" class="text-blue-950 hover:text-yellow-600 transition">Trabajos</a>
-                    <a href="#contacto"
-                        class="bg-blue-950 text-white px-8 py-3 rounded-full hover:bg-yellow-500 hover:text-blue-950 transition shadow-md">Solicitar
-                        Presupuesto</a>
-                </div>
-            </div>
-        </div>
-    </nav>
+  <nav class="fixed w-full z-50 bg-black/90 backdrop-blur-md shadow-lg border-b border-gray-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-20 items-center">
 
-    <section id="inicio" class="relative h-screen flex items-center overflow-hidden bg-blue-950 animate-gradient">
-        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-white">
-            <h1 class="text-6xl md:text-8xl font-extrabold mb-8 leading-none tracking-tighter">
-                Energía confiable,<br> <span class="text-yellow-600">soluciones seguras.</span>
-            </h1>
-            <p class="text-2xl text-gray-200 mb-12 max-w-3xl leading-relaxed font-light">
-                Instalaciones certificadas, boletines eléctricos y mantenimiento integral. Confía en Electricidad AGC
-                para un servicio profesional, rápido y garantizado.
-            </p>
-            <div class="flex flex-col sm:flex-row space-y-5 sm:space-y-0 sm:space-x-6">
-                <a href="#contacto"
-                    class="bg-yellow-400 text-blue-950 text-center px-12 py-5 rounded-2xl font-bold text-xl hover:scale-105 transition-transform shadow-2xl shadow-yellow-400/30">
-                    <i class="fas fa-file-signature mr-2"></i> Presupuesto Sin Compromiso
-                </a>
-                <a href="#contacto"
-                    class="border-2 border-white/40 backdrop-blur-sm text-center px-12 py-5 rounded-2xl font-bold text-xl hover:bg-white hover:text-blue-950 transition">
-                    <i class="fas fa-phone-alt mr-2"></i> Llama Ahora
-                </a>
-            </div>
+        <!-- Logo -->
+        <div class="flex items-center gap-2">
+          <div class="bg-primary p-2.5 rounded-xl shadow-inner">
+            <i class="fas fa-bolt text-2xl text-black"></i>
+          </div>
+          <span class="text-xl sm:text-2xl lg:text-3xl font-black tracking-tighter text-white">
+            ELECTRICIDAD <span class="text-primary">AGC</span>
+          </span>
         </div>
 
-        <div class="absolute bottom-0 left-0 right-0 h-12 bg-gradient-to-t from-gray-50 to-transparent z-10"></div>
-    </section>
-
-    <section id="contacto" class="py-32 bg-gray-100 relative overflow-hidden bg-map">
-        <div class="max-w-7xl mx-auto px-4 relative z-10">
-            <div class="bg-white rounded-[3.5rem] shadow-2xl overflow-hidden border border-gray-100">
-                <div class="grid">
-
-                    <div class="md:col-span-2 bg-blue-950 p-16 text-white flex flex-col justify-between">
-                        <div>
-                            <h2 class="text-5xl font-extrabold tracking-tight mb-8">¿Hablamos?</h2>
-                            <p class="text-xl text-blue-200 mb-16 leading-relaxed">
-                                Cuéntanos tu proyecto o avería. Te responderemos en menos de 24 horas con una solución
-                                profesional.
-                            </p>
-
-                            <div class="grid grid-cols-1 lg:grid-cols-2 gap-y-10 gap-x-8">
-                                <div class="flex items-center gap-6">
-                                    <div
-                                        class="w-16 h-16 flex-shrink-0 bg-blue-900 rounded-2xl flex items-center justify-center shadow-inner border border-blue-800">
-                                        <i class="fas fa-phone-alt text-3xl text-yellow-600"></i>
-                                    </div>
-                                    <div>
-                                        <p class="text-sm text-blue-300 uppercase font-bold tracking-widest">Teléfono
-                                        </p>
-                                        <p class="text-xl font-bold">+34 601 51 20 79</p>
-                                    </div>
-                                </div>
-
-                                <div class="flex items-center gap-6">
-                                    <div
-                                        class="w-16 h-16 flex-shrink-0 bg-blue-900 rounded-2xl flex items-center justify-center shadow-inner border border-blue-800">
-                                        <i class="fas fa-envelope text-3xl text-yellow-600"></i>
-                                    </div>
-                                    <div>
-                                        <p class="text-sm text-blue-300 uppercase font-bold tracking-widest">Email
-                                            técnico</p>
-                                        <p class="text-xl font-bold">electricidadagc@hotmail.com</p>
-                                    </div>
-                                </div>
-
-                                <div class="flex items-center gap-6">
-                                    <div
-                                        class="w-16 h-16 flex-shrink-0 bg-blue-900 rounded-2xl flex items-center justify-center shadow-inner border border-blue-800">
-                                        <i class="fab fa-whatsapp text-3xl text-yellow-600"></i>
-                                    </div>
-                                    <div>
-                                        <p class="text-sm text-blue-300 uppercase font-bold tracking-widest">Whatsapp
-                                        </p>
-                                        <p class="text-xl font-bold">+34 601 51 20 79</p>
-                                    </div>
-                                </div>
-
-                                <div class="flex items-center gap-6">
-                                    <div
-                                        class="w-16 h-16 flex-shrink-0 bg-blue-900 rounded-2xl flex items-center justify-center shadow-inner border border-blue-800">
-                                        <i class="fas fa-map-marker-alt text-3xl text-yellow-600"></i>
-                                    </div>
-                                    <div>
-                                        <p class="text-sm text-blue-300 uppercase font-bold tracking-widest">Área de
-                                            servicio</p>
-                                        <p class="text-xl font-bold">Medina de Pomar</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="mt-16 pt-10 border-t border-blue-900 text-center md:text-left">
-                            <p class="text-blue-300">Profesional Autorizado y Certificado en Baja Tensión</p>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="servicios" class="py-32 relative bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4 relative z-10">
-            <div class="text-center mb-24">
-                <h2 class="text-5xl font-extrabold text-blue-950 tracking-tight">Nuestras Especialidades</h2>
-                <div class="h-2 w-24 bg-yellow-400 mx-auto mt-6 rounded-full shadow-md"></div>
-                <p class="text-xl text-gray-600 mt-6 max-w-2xl mx-auto">Soluciones integrales para hogares, comercios e
-                    industrias con la máxima seguridad.</p>
-            </div>
-
-            <div class="grid md:grid-cols-3 gap-10">
-                <div
-                    class="bg-white p-10 rounded-[2rem] shadow-xl hover:shadow-2xl hover:-translate-y-3 transition-all duration-300 border border-gray-100 flex flex-col group">
-                    <div
-                        class="bg-blue-50 w-20 h-20 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-blue-950 transition-colors">
-                        <i class="fas fa-plug text-5xl text-blue-950 group-hover:text-yellow-600 transition-colors"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold text-blue-950 mb-5">Instalaciones y Reformas</h3>
-                    <p class="text-gray-600 text-lg leading-relaxed flex-grow">Boletines, aumento de potencia,
-                        cuadros eléctricos y reparaciones para viviendas y locales.</p>
-                    <a href="#contacto"
-                        class="text-blue-950 font-bold mt-6 inline-flex items-center group-hover:text-yellow-600">Saber
-                        más <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i></a>
-                </div>
-                <div
-                    class="bg-white p-10 rounded-[2rem] shadow-xl hover:shadow-2xl hover:-translate-y-3 transition-all duration-300 border border-gray-100 flex flex-col group">
-                    <div
-                        class="bg-blue-50 w-20 h-20 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-blue-950 transition-colors">
-                        <i
-                            class="fas fa-tools text-5xl text-blue-950 group-hover:text-yellow-600 transition-colors"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold text-blue-950 mb-5">Mantenimiento</h3>
-                    <p class="text-gray-600 text-lg leading-relaxed flex-grow">Servicio técnico para comunidades y
-                        empresas.</p>
-                    <a href="#contacto"
-                        class="text-blue-950 font-bold mt-6 inline-flex items-center group-hover:text-yellow-600">Saber
-                        más <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i></a>
-                </div>
-                <div
-                    class="bg-white p-10 rounded-[2rem] shadow-xl hover:shadow-2xl hover:-translate-y-3 transition-all duration-300 border border-gray-100 flex flex-col group">
-                    <div
-                        class="bg-blue-50 w-20 h-20 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-blue-950 transition-colors">
-                        <i
-                            class="fas fa-hammer text-5xl text-blue-950 group-hover:text-yellow-600 transition-colors"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold text-blue-950 mb-5">Reparaciones</h3>
-                    <p class="text-gray-600 text-lg leading-relaxed flex-grow">Reparaciones urgentes en viviendas y comunidades.</p>
-                    <a href="#contacto"
-                        class="text-blue-950 font-bold mt-6 inline-flex items-center group-hover:text-yellow-600">Saber
-                        más <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i></a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="trabajos" class="py-32 bg-blue-950 text-white relative overflow-hidden">
-        <div class="absolute inset-0 opacity-10">
-            <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-                <defs>
-                    <pattern id="dotPattern" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
-                        <circle cx="2" cy="2" r="1" fill="white" />
-                    </pattern>
-                </defs>
-                <rect width="100%" height="100%" fill="url(#dotPattern)" />
-            </svg>
+        <!-- Menú escritorio -->
+        <div class="hidden md:flex items-center space-x-8 font-semibold">
+          <a href="#inicio" class="text-gray-300 hover:text-primary transition">Inicio</a>
+          <a href="#contacto" class="text-gray-300 hover:text-primary transition">Contacto</a>
+          <a href="#servicios" class="text-gray-300 hover:text-primary transition">Servicios</a>
+          <a href="#trabajos" class="text-gray-300 hover:text-primary transition">Trabajos</a>
+          <a href="#contacto"
+            class="bg-primary text-black px-6 py-2 rounded-full font-semibold hover:bg-blue-400 transition shadow-md">
+            Presupuesto
+          </a>
         </div>
 
-        <div class="max-w-7xl mx-auto px-4 relative z-10">
-            <div class="text-center mb-24">
-                <h2 class="text-5xl font-extrabold tracking-tight">Proyectos Realizados</h2>
-                <div class="h-2 w-24 bg-yellow-400 mx-auto mt-6 rounded-full shadow-lg"></div>
-                <p class="text-xl text-blue-200 mt-6 max-w-2xl mx-auto">La calidad de nuestro trabajo es nuestra mejor
-                    carta de presentación.</p>
-            </div>
+        <!-- Botón móvil -->
+        <button id="menu-btn" class="md:hidden text-white text-2xl">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
 
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Menú móvil -->
+      <div id="menu" class="hidden md:hidden pb-4 border-t border-gray-800">
+        <a href="#inicio" class="block py-2 text-gray-300 hover:text-primary">Inicio</a>
+        <a href="#contacto" class="block py-2 text-gray-300 hover:text-primary">Contacto</a>
+        <a href="#servicios" class="block py-2 text-gray-300 hover:text-primary">Servicios</a>
+        <a href="#trabajos" class="block py-2 text-gray-300 hover:text-primary">Trabajos</a>
+        <a href="#contacto" class="block mt-3 bg-primary text-black text-center px-6 py-2 rounded-full font-semibold">
+          Presupuesto
+        </a>
+      </div>
+    </div>
+  </nav>
 
-                <div
-                    class="group relative overflow-hidden rounded-[2.5rem] h-[28rem] shadow-2xl transition-all duration-500 hover:-translate-y-2">
-                    <img src="https://images.unsplash.com/photo-1565120130276-dfbd9a7a3ad7?auto=format&fit=crop&w=800&q=80"
-                        alt="Iluminación led moderna en local comercial"
-                        class="w-full h-full object-cover group-hover:scale-110 transition duration-700 ease-in-out">
+  <section id="inicio"
+    class="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-r from-white via-gray-50 to-primary animate-gradient">
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 text-center flex flex-col items-center">
+
+      <img src="./assets/logo.png" alt="Logo de Electricidad AGC"
+        class="w-48 h-48 md:w-64 md:h-64 mb-12 animate-fade-in" />
+
+      <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-6 text-gray-950 tracking-tight leading-tight">
+        Energía confiable,<br>
+        <span class="text-primary">soluciones seguras.</span>
+      </h1>
+
+      <p class="text-base sm:text-lg text-gray-700 mb-12 max-w-2xl mx-auto">
+        Instalaciones certificadas, boletines eléctricos y mantenimiento integral en Burgos.
+      </p>
+
+      <div class="flex flex-col sm:flex-row gap-5 justify-center">
+        <a href="#contacto"
+          class="bg-primary text-white text-center px-10 py-4 rounded-xl font-bold hover:scale-105 transition shadow-lg w-full sm:w-auto">
+          <i class="fas fa-file-signature mr-2"></i> Presupuesto
+        </a>
+        <a href="#contacto"
+          class="border-2 border-primary text-primary text-center px-10 py-4 rounded-xl font-bold hover:bg-primary hover:text-white transition w-full sm:w-auto">
+          <i class="fas fa-phone-alt mr-2"></i> Llama Ahora
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacto" class="py-24 bg-white relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 relative z-10">
+      <div class="bg-white rounded-[3.5rem] shadow-2xl overflow-hidden border border-gray-100">
+        <div class="grid">
+
+          <div class="md:col-span-2 bg-blue-600 p-16 text-white flex flex-col justify-between">
+            <div>
+              <h2 class="text-5xl font-extrabold tracking-tight mb-8">¿Hablamos?</h2>
+              <p class="text-xl text-blue-200 mb-16 leading-relaxed">
+                Cuéntanos tu proyecto o avería. Te responderemos en menos de 24 horas con una solución
+                profesional.
+              </p>
+
+              <div class="grid grid-cols-1 lg:grid-cols-2 gap-y-10 gap-x-8">
+                <div class="flex items-center gap-6">
+                  <div
+                    class="w-16 h-16 flex-shrink-0 bg-blue-800 rounded-2xl flex items-center justify-center shadow-inner">
+                    <i class="fas fa-phone-alt text-3xl text-white"></i>
+                  </div>
+                  <div>
+                    <p class="text-sm text-blue-300 uppercase font-bold tracking-widest">Teléfono
+                    </p>
+                    <p class="text-xl font-bold">+34 601 51 20 79</p>
+                  </div>
                 </div>
-            </div>
-        </div>
-    </section>
 
-    <footer class="py-16 text-center bg-white border-t border-gray-100">
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="flex justify-center items-center gap-2 mb-8">
-                <div class="bg-yellow-600 p-2 rounded-lg">
-                    <i class="fas fa-bolt text-lg text-blue-950"></i>
+                <div class="flex items-center gap-6">
+                  <div
+                    class="w-16 h-16 flex-shrink-0 bg-blue-800 rounded-2xl flex items-center justify-center shadow-inner">
+                    <i class="fas fa-envelope text-3xl text-white"></i>
+                  </div>
+                  <div>
+                    <p class="text-sm text-blue-300 uppercase font-bold tracking-widest">Email
+                      técnico</p>
+                    <p class="text-xl font-bold">electricidadagc@hotmail.com</p>
+                  </div>
                 </div>
-                <span class="text-2xl font-black tracking-tighter text-blue-950">ELECTRICIDAD <span
-                        class="text-yellow-600">AGC</span></span>
-            </div>
-            <p class="text-gray-500 font-medium text-lg">© 2026 Electricidad AGC. Todos los derechos reservados.</p>
-            <p class="text-sm text-gray-400 mt-2">Empresa Instaladora Autorizada en Baja Tensión.</p>
 
-            <div class="flex justify-center space-x-8 mt-10 text-blue-950">
-                <a href="#"
-                    class="w-12 h-12 rounded-full bg-gray-50 flex items-center justify-center hover:bg-yellow-400 transition-colors shadow-sm"><i
-                        class="fab fa-whatsapp text-xl"></i></a>
-                <a href="#"
-                    class="w-12 h-12 rounded-full bg-gray-50 flex items-center justify-center hover:bg-yellow-400 transition-colors shadow-sm"><i
-                        class="fab fa-facebook-f text-xl"></i></a>
+                <div class="flex items-center gap-6">
+                  <div
+                    class="w-16 h-16 flex-shrink-0 bg-blue-800 rounded-2xl flex items-center justify-center shadow-inner">
+                    <i class="fab fa-whatsapp text-3xl text-white"></i>
+                  </div>
+                  <div>
+                    <p class="text-sm text-blue-300 uppercase font-bold tracking-widest">Whatsapp
+                    </p>
+                    <p class="text-xl font-bold">+34 601 51 20 79</p>
+                  </div>
+                </div>
+
+                <div class="flex items-center gap-6">
+                  <div
+                    class="w-16 h-16 flex-shrink-0 bg-blue-800 rounded-2xl flex items-center justify-center shadow-inner">
+                    <i class="fas fa-map-marker-alt text-3xl text-white"></i>
+                  </div>
+                  <div>
+                    <p class="text-sm text-blue-300 uppercase font-bold tracking-widest">Área de
+                      servicio</p>
+                    <p class="text-xl font-bold">Medina de Pomar</p>
+                  </div>
+                </div>
+              </div>
             </div>
+
+            <div class="mt-16 pt-10 border-t border-blue-900 text-center md:text-left">
+              <p class="text-blue-300">Profesional Autorizado y Certificado en Baja Tensión</p>
+            </div>
+          </div>
+
         </div>
-    </footer>
+      </div>
+    </div>
+  </section>
 
+  <section id="servicios" class="py-24 bg-lightGray">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="text-center mb-20">
+        <h2 class="text-5xl font-extrabold text-black tracking-tight">Nuestras Especialidades</h2>
+        <div class="h-1.5 w-20 bg-primary mx-auto mt-6 rounded-full"></div>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-10">
+        <div
+          class="bg-white p-10 rounded-[2.5rem] shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 border border-gray-100 group">
+          <div
+            class="bg-lightGray w-16 h-16 rounded-xl flex items-center justify-center mb-8 group-hover:bg-primary transition-colors">
+            <i class="fas fa-plug text-3xl text-primary group-hover:text-white transition-colors"></i>
+          </div>
+          <h3 class="text-2xl font-bold text-black mb-4">Instalaciones</h3>
+          <p class="text-gray-500 leading-relaxed">Reformas, boletines y aumento de potencia con certificación oficial.
+          </p>
+        </div>
+        <div
+          class="bg-white p-10 rounded-[2.5rem] shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 border border-gray-100 group">
+          <div
+            class="bg-lightGray w-16 h-16 rounded-xl flex items-center justify-center mb-8 group-hover:bg-primary transition-colors">
+            <i class="fas fa-tools text-3xl text-primary group-hover:text-white transition-colors"></i>
+          </div>
+          <h3 class="text-2xl font-bold text-black mb-4">Mantenimiento</h3>
+          <p class="text-gray-500 leading-relaxed">Servicio preventivo para comunidades de vecinos y locales
+            comerciales.</p>
+        </div>
+        <div
+          class="bg-white p-10 rounded-[2.5rem] shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 border border-gray-100 group">
+          <div
+            class="bg-lightGray w-16 h-16 rounded-xl flex items-center justify-center mb-8 group-hover:bg-primary transition-colors">
+            <i class="fas fa-bolt text-3xl text-primary group-hover:text-white transition-colors"></i>
+          </div>
+          <h3 class="text-2xl font-bold text-black mb-4">Urgencias</h3>
+          <p class="text-gray-500 leading-relaxed">Reparación de averías y cortes de luz de forma rápida y segura.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="trabajos" class="py-32 bg-blue-500 text-white relative overflow-hidden">
+    <div class="absolute inset-0 opacity-10">
+      <svg width="100%" height="100%">
+        <defs>
+          <pattern id="dotPattern" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+            <circle cx="2" cy="2" r="2" fill="white" />
+          </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#dotPattern)" />
+      </svg>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 relative z-10">
+      <div class="text-center mb-24">
+        <h2 class="text-5xl font-extrabold tracking-tight">Proyectos Realizados</h2>
+        <div class="h-2 w-24 bg-yellow-400 mx-auto mt-6 rounded-full shadow-lg"></div>
+        <p class="text-xl text-blue-200 mt-6 max-w-2xl mx-auto">La calidad de nuestro trabajo es nuestra mejor
+          carta de presentación.</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div
+          class="group relative overflow-hidden rounded-[2.5rem] h-[28rem] shadow-2xl transition-all duration-500 hover:-translate-y-2">
+          <img src="https://images.unsplash.com/photo-1565120130276-dfbd9a7a3ad7?auto=format&fit=crop&w=800&q=80"
+            alt="Iluminación led moderna en local comercial"
+            class="w-full h-full object-cover group-hover:scale-110 transition duration-700 ease-in-out">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="py-12 bg-black text-center">
+    <div class="flex justify-center items-center gap-2 mb-4">
+      <div class="bg-primary p-2 rounded-lg">
+        <i class="fas fa-bolt text-white"></i>
+      </div>
+      <span class="text-xl font-bold text-white">ELECTRICIDAD <span class="text-primary">AGC</span></span>
+    </div>
+    <p class="text-gray-500">© 2026 Electricidad AGC. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    const btn = document.getElementById('menu-btn');
+    const menu = document.getElementById('menu');
+    btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+  </script>
 </body>
-
 </html>
